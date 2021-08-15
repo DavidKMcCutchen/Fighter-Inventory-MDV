@@ -1,0 +1,20 @@
+{
+  "fighters": [
+    {
+      "id": 2,
+      "name": "F-16",
+      "generation": "4",
+      "role": "Multi-Role",
+      "make": "General Dynamics",
+      "users": "Many"
+    },
+    {
+      "id": 3,
+      "name": "F-35",
+      "generation": "5",
+      "role": "Multi-Role",
+      "make": "Lockheed Martin",
+      "users": "USA and Select NATO Nations"
+    }
+  ]
+}

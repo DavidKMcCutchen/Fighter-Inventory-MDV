@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="col-50" layout="row" layout-align="center center">
+      <fighter-inventory-fighter-list
+        [fighters]="allFighters$ | async"
+        (selected)="selectFighter($event)"
+        (deleted)="deleteFighter($event)"
+      ></fighter-inventory-fighter-list>
+    </div>
+    <div class="col-50" layout="row" layout-align="center center">
+      <fighter-inventory-fighter-details
+        [fighter]="selectedFighter$ | async"
+        (saved)="saveFighter($event)"
+        (cancelled)="resetFighter()"
+        [form]="form"
+      ></fighter-inventory-fighter-details>
+    </div>
+  </div>

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Message } from '@fighter-inventory/api-interfaces';
+
 
 @Component({
   selector: 'fighter-inventory-root',
@@ -8,6 +7,10 @@ import { Message } from '@fighter-inventory/api-interfaces';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  hello$ = this.http.get<Message>('/api/hello');
-  constructor(private http: HttpClient) {}
+  title= 'Fighters';
+  links= [
+    {path: '', icon: 'home', title: 'Home'},
+    {path: 'fighters', icon: 'view_list', title: 'Fighters'}
+
+  ]
 }

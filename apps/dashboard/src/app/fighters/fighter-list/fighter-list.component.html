@@ -1,0 +1,23 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        <h1>Fighters</h1>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item *ngFor="let fighter of fighters" data-test="fighter-list-item" (click)="selected.emit(fighter)">
+          <h3 matLine>{{fighter.name}}</h3>
+          <p matLine>{{fighter.generation}}</p>
+          <p matLine>{{fighter.role}}</p>
+          <p matLine>{{fighter.make}}</p>
+          <p matLine>{{fighter.users}}</p>
+          
+  
+          <button mat-icon-button (click)="deleted.emit(fighter); $event.stopImmediatePropagation()">
+            <mat-icon *ngIf="!readonly">delete</mat-icon>
+          </button>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>

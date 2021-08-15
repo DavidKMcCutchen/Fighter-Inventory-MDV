@@ -14,8 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
+    "noImplicitAny": false,
+    "strictPropertyInitialization": false,
     "paths": {
-      "@fighter-inventory/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@fighter-inventory/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@fighter-inventory/core-data": ["libs/core-data/src/index.ts"],
+      "@fighter-inventory/core-state": ["libs/core-state/src/index.ts"],
+      "@fighter-inventory/material": ["libs/material/src/index.ts"],
+      "@fighter-inventory/ui-login": ["libs/ui-login/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
